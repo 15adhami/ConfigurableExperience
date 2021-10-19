@@ -55,9 +55,14 @@
       <HintPath>..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="XmlExtensions">
+      <HintPath>..\XML Extensions\1.3\Assemblies\XmlExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigurableExperience.cs" />
+    <Compile Include="Patches\LearnRateFactor_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
