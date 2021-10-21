@@ -61,9 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigurableExperience.cs" />
-    <Compile Include="Patches\LearnRateFactor_Patch.cs" />
+    <Compile Include="Source\ConfigurableExperience.cs" />
+    <Compile Include="Source\Patches\GetSkillDescription_Patch.cs" />
+    <Compile Include="Source\Patches\LearnRateFactor_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Defs\Menu.xml" />
+    <Content Include="Patches\Menu_Patch.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

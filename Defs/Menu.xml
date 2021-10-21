@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <XmlExtensions.SettingsMenuDef>
+        <defName>imranfish_configurableexperience_menu</defName>
+        <modId>imranfish.configurableexperience</modId>
+        <label>Configurable Experience</label>
+        <tKey>ConfigurableExperience_Label</tKey>
+        <settings>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>All numbers are the percentage multipliers for the given passion/skill. Changes are applied immediately.</text>
+            </li>
+            <li Class="XmlExtensions.Setting.SplitColumn">
+                <leftCol>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.SplitColumn">
+                                <split>0.3</split>
+                                <leftCol>
+                                    <li Class="XmlExtensions.Setting.Text">
+                                        <text>No passion: </text>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Gap">
+                                        <spacing>2</spacing>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Text">
+                                        <text>Minor passion: </text>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Gap">
+                                        <spacing>2</spacing>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Text">
+                                        <text>Major passion: </text>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Gap">
+                                        <spacing>2</spacing>
+                                    </li>
+                                </leftCol>
+                                <rightCol>
+                                    <li Class="XmlExtensions.Setting.IntEntry">
+                                        <key>multiplierNoPassion</key>
+                                        <max>999999</max>
+                                        <defaultValue>35</defaultValue>
+                                    </li>
+
+                                    <li Class="XmlExtensions.Setting.IntEntry">
+                                        <key>multiplierMinorPassion</key>
+                                        <max>999999</max>
+                                        <defaultValue>100</defaultValue>
+                                    </li>
+
+                                    <li Class="XmlExtensions.Setting.IntEntry">
+                                        <key>multiplierMajorPassion</key>
+                                        <max>999999</max>
+                                        <defaultValue>150</defaultValue>
+                                    </li>
+                                </rightCol>
+                            </li>
+                        </settings>
+                    </li>
+                </leftCol>
+                <rightCol>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                        </settings>
+                    </li>
+                </rightCol>
+            </li>
+            <li Class="XmlExtensions.Setting.ResetSettings"/>
+        </settings>
+    </XmlExtensions.SettingsMenuDef>
+</Defs>

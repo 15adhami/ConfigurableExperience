@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="XmlExtensions.ForEach">
+        <xpath>Defs/SkillDef[defName and skillLabel]</xpath>
+        <storeIn>DEF</storeIn>
+        <apply>
+            <Operation Class="XmlExtensions.AggregateValues">
+                <valueOperations>
+                    <Operation Class="XmlExtensions.CreateVariable">
+                        <value>{DEF}/skillLabel</value>
+                        <fromXml>true</fromXml>
+                        <storeIn>label</storeIn>
+                    </Operation>
+                    <Operation Class="XmlExtensions.CreateVariable">
+                        <value>{DEF}/defName</value>
+                        <fromXml>true</fromXml>
+                        <storeIn>defName</storeIn>
+                    </Operation>
+                </valueOperations>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationAdd">
+                        <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="imranfish_configurableexperience_menu"]/settings/li/rightCol/li/settings</xpath>
+                        <value>
+                            <li Class="XmlExtensions.Setting.SplitColumn">
+                                <split>0.3</split>
+                                <leftCol>
+                                    <li Class="XmlExtensions.Setting.Text">
+                                        <text>{label}: </text>
+                                    </li>
+                                </leftCol>
+                                <rightCol>
+                                    <li Class="XmlExtensions.Setting.IntEntry">
+                                        <key>{defName}StatMultiplier</key>
+                                        <max>999999</max>
+                                        <defaultValue>100</defaultValue>
+                                    </li>
+                                </rightCol>
+                            </li>
+                        </value>
+                    </Operation>
+                </apply>
+            </Operation>
+        </apply>
+    </Operation>
+</Patch>
